@@ -1,15 +1,42 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 		<link rel="shortcut icon" type="image/png" href="https://zapstergames.github.io/ZapsterGames/images/ZapsterGames.png"/>
 </head>
-	<!––So, Your looking into the code huh? Pretty trashy... Well, I hope you get what you want from this Luke -->
 <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
 body {
   padding: 20px 80px;
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
+}
+#sub {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  color: #555;
+  position: relative;
+}
+#subbottom {
+opacity: 0.2;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  color: #555;
+  position: relative;
 }
 #logo {
   font-family: 'Open Sans', sans-serif;
@@ -41,7 +68,7 @@ body {
 }
 #menu {
   width: 1030px;
-  height: 42px;
+  height: 150px;
   list-style: none;
   margin: 10px 0 0 0; padding: 25px 10px;
   border-top: 4px double #AAA;
@@ -122,19 +149,30 @@ body {
 <div id="header">
   <a href="/Home/" id="logo">ZapsterGames</a>
   <ul id="menu">
-    <li><a href="/BroadwayHub/"><span>BroadwayHub</span></a></li>
-    <li><a href="/ZapsterGames/"><span>ZapsterGames</span></a></li>
+    <li onmouseover="bhinfo()"><a href="/BroadwayHub/"><span>BroadwayHub</span></a></li>
+    <li id="btn1"><a href="/ZapsterGames/"><span>ZapsterGames</span></a></li>
     <li><a href="/GameHub/"><span>GameHub</span></a></li>
     <li><a href="/ExperimentX/"><span>ExperimentX</span></a></li>
       <br> <br> <br> <br>
     <li><a href="/SaER"><span>SaER CONSOLE</span></a></li>
+    <li><a href="/SaER/404.html"><span>REDACTED</span></a></li>
+    <li><a href="/SaER/404.html"><span>REDACTED</span></a></li>
+    <li><a href="/SaER/404.html"><span>REDACTED</span></a></li>
+    <br><br>
+    <p id="sub">UPDATED HOME PAGE.<br>EXPERIMENTX has been officially added<br>Check out SCIENCE AND ENTITY RESEARCH on the ZapsterGames Development page.</p>
+
   </ul>
 </div>
-	</br></br></br></br></br></br>
+	</br></br></br></br></br></br></br></br>
 	<img src="https://zapstergames.github.io/ZapsterGames/images/V4ZapsterLogoGlitch.gif" width="400px" id="i1">
+        <p id="subbottom">Site made by Aaron Ballinger. Why are you looking down here?</p>
   </center>
-<script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  $("#btn1").hover(function(){
+    alert("Your book is overdue.");
+    }, function(){
+    $(this).css("background-color", "pink");
+  });
 </script>
 
 </body>
