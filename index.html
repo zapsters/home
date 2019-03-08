@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,28 +142,86 @@ opacity: 0.2;
   bottom: -4px;
 	background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) 100%);
 }
+.slideleft_1 {
+  position: relative;
+  -webkit-animation-name: slideleft; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slideleft;
+  animation-duration: 4s;
+}
+@keyframes slideleft {
+  0%   {background-color:red; left:-700px; top:0px;}
+  40% {background-color:red; left:0px; top:0px;}
+}
+.slideright_1 {
+  position: relative;
+  -webkit-animation-name: slideright; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slideright;
+  animation-duration: 4s;
+}
+@keyframes slideright {
+  0%   {background-color:red; left:700px; top:0px;}
+  40% {background-color:red; left:0px; top:0px;}
+}
+.slidetop_1 {
+  position: relative;
+  -webkit-animation-name: slidetop; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slidetop;
+  animation-duration: 4s;
+}
+@keyframes slidetop {
+  0%   {opacity: 0; left:0px; top:-200px;}
+  20% {opacity: 1; left:0px; top:0px;}
+}
+.slidebottom_1 {
+  position: relative;
+  -webkit-animation-name: slidebottom; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slidebottom;
+  animation-duration: 4s;
+  
+}
+@keyframes slidebottom {
+  0%   {left:0px; top:1500px;}
+  70% {left:0px; top:0px;}
+}
+.slideimage_1 {
+  position: relative;
+  -webkit-animation-name: slideimage; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slideimage;
+  animation-duration: 4s;
+  
+}
+@keyframes slideimage {
+  0%   {left:0px; top:-450px;}
+  20% {left:0px; top:0px;}
+}
 </style>
 <body>
 <center>
 <div id="header">
-  <a href="/Home/" id="logo">ZapsterGames</a>
+  <a href="/Home/" class="slidetop_1" id="logo">ZapsterGames</a>
+  
   <ul id="menu">
-    <li onmouseover="bhinfo()"><a href="/BroadwayHub/"><span>BroadwayHub</span></a></li>
-    <li id="btn1"><a href="/ZapsterGames/"><span>Development</span></a></li>
-    <li><a href="/GameHub/"><span>GameHub</span></a></li>
-    <li><a href="/ExperimentX/"><span>ExperimentX</span></a></li>
+    <li class="slideleft_1" onmouseover="bhinfo()"><a href="/BroadwayHub/"><span>BroadwayHub</span></a></li>
+    <li class="slideleft_1" id="btn1"><a href="/ZapsterGames/"><span>Development</span></a></li>
+    <li class="slideright_1" ><a href="/GameHub/"><span>GameHub</span></a></li>
+    <li class="slideright_1"><a href="/ExperimentX/"><span>ExperimentX</span></a></li>
       <br> <br> <br> <br>
-    <li><a href="/SaER"><span>SaER CONSOLE</span></a></li>
-    <li><a href="/ZapsterGames/WTII.html"><span>WTII?</span></a></li>
-    <li><a href="/SaER/404.html"><span>REDACTED</span></a></li>
-    <li><a href="/SaER/404.html"><span>REDACTED</span></a></li>
+    <li  class="slideleft_1"><a href="/SaER"><span>SaER CONSOLE</span></a></li>
+    <li  class="slideleft_1"><a href="/ZapsterGames/WTII.html"><span>WTII?</span></a></li>
+    <li class="slideright_1"><a href="/SaER/404.html"><span>REDACTED</span></a></li>
+    <li class="slideright_1"><a href="/SaER/404.html"><span>REDACTED</span></a></li>
     <br><br>
-    <p id="sub">WTII is <b>UPLOADED!</b><br>Check out SCIENCE AND ENTITY RESEARCH on the ZapsterGames Development page.</p>
+    <p id="sub" class="slidebottom_1" >WTII is <b>UPLOADED!</b><br>Check out SCIENCE AND ENTITY RESEARCH on the ZapsterGames Development page.</p>
 
   </ul>
 </div>
 	</br></br></br></br></br></br></br></br>
-	<img src="https://zapstergames.github.io/ZapsterGames/images/V4ZapsterLogoGlitch.gif" width="400px" id="i1">
+	<img src="https://zapstergames.github.io/ZapsterGames/images/V4ZapsterLogoGlitch.gif" width="400px" id="i1" class="slideimage_1">
         <p id="subbottom">Site made by Aaron Ballinger. Why are you looking down here?</p>
   </center>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
