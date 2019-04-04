@@ -1,65 +1,14 @@
 <!DOCTYPE html>
 <html>
-<script>
-var statePass = 0;
-var stateSecret = 0;
-function handle(e){
-	if(e.keyCode === 13){
-    document.getElementById("inputPass").value="";
-		if(document.getElementById('input').value == "Help") {
-        	document.getElementById("sub2b").innerHTML="Wish I could help you";
-            document.getElementById("sub2c").innerHTML="";
-            document.getElementById("input").value="";
-            clear();
-        } else if(document.getElementById('input').value == "Admin.PasswordTest") {
-        	document.getElementById("sub2b").innerHTML="Insufficient Permissions to SaER Servers - Password:2";
-            document.getElementById("sub2c").innerHTML="Please Enter your Identification Number"; 
-            document.getElementById("input").value="";
-			document.getElementById("temp123").style.display='block';
-            statePass = 1;
-        } else if(document.getElementById('input').value == "Mr. Bisesi") {
-        	document.getElementById("sub2b").innerHTML="This project is dedicated to Adam Bisesi. The person who helped me learn how to make everything you see infront of you. This project wouldnt be posible without you.";
-            document.getElementById("sub2c").innerHTML="Rest in Peace"; 
-            document.getElementById("input").value="Thank you Mr. Bisesi";
-            statePass = 1;
-        } else {
-            document.getElementById("sub2b").innerHTML="-NO-";
-            document.getElementById("sub2c").innerHTML="-RESPONSE-";
-            document.getElementById("input").value="";
-        	document.getElementById("temp123").style.display='none';
-            document.getElementById("inputPass").value="";
-            statePass = 0;
-            
-        }
-        document.getElementById("mydivheader").innerHTML="━━━━━━━━";
-	}
-}
-function handle2(e){
-	if(e.keyCode === 13){
-    	if(statePass == 1 && document.getElementById('inputPass').value == "2") {
-            document.getElementById("sub2b").innerHTML="top";
-            document.getElementById("sub2c").innerHTML="- Aaron B Ballin";
-            document.getElementById("input").value="";
-        	document.getElementById("temp123").style.display='none';
-        } else {
-        document.getElementById("sub2b").innerHTML="-Insufficient Permissions to SaER Servers-";
-            document.getElementById("sub2c").innerHTML="-Activating Memetic Kill Agent-";
-            document.getElementById("input").value="";
-        	document.getElementById("temp123").style.display='none';
-        }
-        
-    }
-}
-</script>
 <head>
-
+		<link rel="shortcut icon" type="image/png" href="https://zapstergames.github.io/ZapsterGames/images/ZapsterGames.png"/>
+</head>
 <style>
-html, body {margin: 0; height: 100%; overflow: hidden}
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
-map {
-  display: block;
-  cursor: pointer;
+body {
+  padding: 20px 80px;
+  background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
 }
 #sub {
   font-family: 'Open Sans', sans-serif;
@@ -68,249 +17,220 @@ map {
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  color: #555;
+  position: relative;
+}
+#subbottom {
+opacity: 0.2;
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  color: #555;
+  position: relative;
+}
+#logo {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 150px;
+  font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  text-shadow: #000 3px 2px 0;
-  color: #555;
+  text-shadow: #EDEDED 3px 2px 0;
   position: relative;
 }
-#sub2 {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  line-height: 1;
-  text-shadow: #000000 3px 2px 0;
-  color: #555;
-  position: relative;
-  bottom: 5px;
-}
-#sub2v2 {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  line-height: 1;
-  text-shadow: #000000 3px 2px 0;
-  color: #555;
-  position: relative;
-  bottom: 5px;
-}
-#sub2b {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  line-height: 1;
-  text-shadow: #000000 3px 2px 0;
-  color: #555;
-  position: relative;
-  bottom: 5px;
-}
-#sub2c {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  line-height: 1;
-  text-shadow: #000000 3px 2px 0;
-  color: #555;
-  position: relative;
-  bottom: 5px;
-}
-.poz{
-font-family: 'Open Sans', sans-serif;
-text-shadow: #000000 3px 2px 0;
-font-size: 30px;
+#logo:after {
+  content:"ZapsterGames";
   position: absolute;
-  background-color: #555;
-  bottom: 5px;
-  left: 5px;
-  color: white;
-    width: 100%;
-  border: 3px solid #555;"
+  left: 8px;
+  top: 32px;
 }
-.pozb{
-font-family: 'Open Sans', sans-serif;
-text-shadow: #000000 3px 2px 0;
-font-size: 30px;
-  background-color: #555;
-  bottom: -40px;
-    z-index: 5;
-  color: white;
-    width: 15%;
-  border: 3px solid #555;"
+#logo:after {
+  /*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
+  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
+  background-size: 4px 4px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -5;
+  display: block;
+  text-shadow: none;
 }
-
-.poz2{
-font-family: 'Open Sans', sans-serif;
+#menu {
+  width: 1030px;
+  height: 150px;
+  list-style: none;
+  margin: 10px 0 0 0; padding: 25px 10px;
+  border-top: 4px double #AAA;
+  border-bottom: 4px double #AAA;
+  position: relative;
+  text-align: center;
+}
+#menu li {
+  display: inline-block;
+  width: 213px;
+  margin: 0 10px;
+  position: relative;
+  -webkit-transform: skewy(-3deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: 200ms all;
+}
+#menu li a {
+  text-transform: uppercase;
+  font-family: 'Squada One', cursive;
+  font-weight: 800;
+  display: block;
+  background: #FFF;
+  padding: 2px 10px;
+  color: #333;
+  font-size: 35px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  text-shadow: 
+		1px 1px 0px #FFF, 
+		2px 2px 0px #999,
+		3px 3px 0px #FFF;
+	background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,.05) 100%);
+	-webkit-transition: 1s all;
+	background-image: -webkit-linear-gradient(left top, 
+		transparent 0%, transparent 25%, 
+		rgba(0,0,0,.15) 25%, rgba(0,0,0,.15) 50%, 
+		transparent 50%, transparent 75%, 
+		rgba(0,0,0,.15) 75%);
+  background-size: 4px 4px;
+	box-shadow: 
+		0 0 0 1px rgba(0,0,0,.4) inset, 
+		0 0 20px -5px rgba(0,0,0,.4),
+		0 0 0px 3px #FFF inset;
+}
+#menu li:hover {
+	width: 243px;
+	margin: 0 -5px;
+}
+#menu a:hover {
+  color: #d90075;
+}
+#menu li:after,
+#menu li:before {
+  content: '';
   position: absolute;
-  bottom: 35px;
-  left: 5px;
-  color: white;
-    width: 100%;
+  width: 50px;
+  height: 100%;
+  background: #BBB;
+  -webkit-transform: skewY(8deg);
+  x-index: -3;
+	border-radius: 4px;
 }
-.poz3{
-font-family: 'Open Sans', sans-serif;
-font-size: 30px;
-  position: absolute;
-  bottom: 200px;
-  left: 5px;
-    z-index: 9;
-  color: white;
-    width: 100%;
+#menu li:after {
+	background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.4) 100%);
+  right: 0;
+  top: -4px; 
 }
-.temp123{
-  text-align:center;
+#menu li:before {
+  left: 0;
+  bottom: -4px;
+	background-image: -webkit-linear-gradient(right, transparent 0%, rgba(0,0,0,.4) 100%);
+}
+.slideleft_1 {
+  position: relative;
+  -webkit-animation-name: slideleft; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slideleft;
+  animation-duration: 4s;
+}
+@keyframes slideleft {
+  0%   {background-color:red; left:-700px; top:0px;}
+  40% {background-color:red; left:0px; top:0px;}
+}
+.slideright_1 {
+  position: relative;
+  -webkit-animation-name: slideright; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slideright;
+  animation-duration: 4s;
+}
+@keyframes slideright {
+  0%   {background-color:red; left:700px; top:0px;}
+  40% {background-color:red; left:0px; top:0px;}
+}
+.slidetop_1 {
+  position: relative;
+  -webkit-animation-name: slidetop; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slidetop;
+  animation-duration: 4s;
+}
+@keyframes slidetop {
+  0%   {opacity: 0; left:0px; top:-200px;}
+  20% {opacity: 1; left:0px; top:0px;}
+}
+.slidebottom_1 {
+  position: relative;
+  -webkit-animation-name: slidebottom; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slidebottom;
+  animation-duration: 4s;
   
-  font-size: 30px;
-    text-shadow: #000000 3px 2px 0;
 }
-.temp123 > input{
-  text-align:left;
-  width: 50%;
+@keyframes slidebottom {
+  0%   {left:0px; top:1500px;}
+  70% {left:0px; top:0px;}
 }
-.container .btn {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translate(-50%, 30%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #fff;
-  color: #fff;
-  font-size: 5px;
-  padding: 5px 5px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-}
-.container {
+.slideimage_1 {
   position: relative;
-  width: 100%;
-  max-width: 400px;
+  -webkit-animation-name: slideimage; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slideimage;
+  animation-duration: 4s;
+  
 }
-#more {
-  background:none;
-  border:none;
-  color:#FFF;
-  font-family:Verdana, Geneva, sans-serif;
-cursor: default
+@keyframes slideimage {
+  0%   {left:0px; top:-450px;}
+  20% {left:0px; top:0px;}
 }
-
-#mydiv {
-  position: absolute;
-  z-index: 9;
-  background-color: transparent;
-  text-align: center;
-  border: 1px solid transparent;
-}
-
-#mydivheader {
-  cursor: move;
-  z-index: 10;
-    font-family: 'Open Sans', sans-serif;
-  color: #555;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  line-height: 1;
-  text-shadow: #000000 3px 2px 0;
-  color: #555;
-  position: relative;
-  bottom: 5px;
-}
-
 </style>
-</head>
-<body style="background-color:black;">
-
+<body>
 <center>
-<p id="sub" >SAER ADMIN CONSOLE</p>
-<div class="container">
-  <button onclick="secretB()" style="display:none" class="btn" id="more" ></button>
+<div id="header">
+  <a href="/Home/" class="slidetop_1" id="logo">ZapsterGames</a>
+  
+  <ul id="menu">
+    <li class="slideleft_1" onmouseover="bhinfo()"><a href="/LyricHub/"><span>BroadwayHub</span></a></li>
+    <li class="slideleft_1" id="btn1"><a href="/SaER"><span>SaER CONSOLE</span></a></li>
+    <li class="slideright_1" ><a href="/SaER/404.html"><span>Redacted</span></a></li>
+    <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
+      <br> <br> <br> <br>
+    <li  class="slideleft_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
+    <li  class="slideleft_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
+    <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
+    <li class="slideright_1"><a href="/ExperimentX/"><span>ExperimentX</span></a></li>
+    <br><br>
+    <p id="sub" class="slidebottom_1" >Check out the <b>NEW</b> BroadwayHub! (Under Development) </br>Updated Home and removed <b>GameHub</b></p>
+
+  </ul>
 </div>
-<img id="logo" src="https://zapstergames.github.io/ZapsterGames/images/V4ZapsterLogoGlitch.gif" width="400px" id="i1" usemap="#saer" cursor="default;">
-</br></br></br></br></br></br></br></br></br>
-<div class=poz2>
-<p>THIS PROJECT IS DEDICATED TO ADAM BISESI. Rest in Peace</p>
-<p id="sub2" style="font-size:3;">SaER  Copyright  2019</p>
-<p id="sub2v2" style="font-size:3;">SaER logo above, Websites, and other media are owned and claimed by Science and Entity Research /// UPDATE 1/19/19</p>
-</div>
-<div id="mydiv" class=poz3>
-<div id="mydivheader">*Click and Hold to drag*</div>
-<p id="sub2b" style="font-size:20;">-NO-</p>
-<p id="sub2c" style="font-size:20;">-RESPONSE-</p>
-<div class="temp123" id="temp123" style="display:none" autocomplete="off" spellcheck="false">
-<input type="text" id="inputPass" class="pozb" onkeypress="handle2(event)" autocomplete="off" spellcheck="false" placeholder="-"/>
-</div>
-</div>
-<div>
-<input type="text" id="input" autocomplete="off" class="poz" placeholder="Awaiting Command..."onkeypress="handle(event)" spellcheck="false">
-</div>
-
-
-</center>
-</body>
-<script>
-//Make the DIV element draggagle:
-dragElement(document.getElementById("mydiv"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    /* if present, the header is where you move the DIV from:*/
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-    
-  } else {
-    /* otherwise, move the DIV from anywhere inside the DIV:*/
-    elmnt.onmousedown = dragMouseDown;
-    ee
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-  document.getElementById("mydivheader").innerHTML="━━━━━━━━";
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
+	</br></br></br></br></br></br></br></br>
+	<img src="https://zapstergames.github.io/ZapsterGames/images/V4ZapsterLogoGlitch.gif" width="400px" id="i1" class="slideimage_1">
+        <p id="subbottom">Site made by Aaron Ballinger. Why are you looking down here?</p>
+  </center>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  $("#btn1").hover(function(){
+    alert("Your book is overdue.");
+    }, function(){
+    $(this).css("background-color", "pink");
+  });
 </script>
+
+</body>
 </html>
