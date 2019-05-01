@@ -1,7 +1,38 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("May 21, 2019 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 <title>ZapsterGames</title>
 <link rel="shortcut icon" type="image/png" href="https://zapstergames.github.io/Home/images/ZapsterGames.png"/>
 </head>
@@ -13,6 +44,19 @@ body {
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
 }
 #sub {
+  font-family: 'Open Sans', sans-serif;
+  color: #555;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1;
+  text-shadow: #EDEDED 3px 2px 0;
+  color: #555;
+  position: relative;
+}
+#timer {
   font-family: 'Open Sans', sans-serif;
   color: #555;
   text-decoration: none;
@@ -218,7 +262,8 @@ opacity: 0.2;
     <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
     <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
     <br><br>
-    <p id="sub" class="slidebottom_1" ><b>TIMER SYSTEM ADDED</br>RIFT S AND QUEST RELEASE ON MAY 21st!</b></p>
+    <p id="sub" class="slidebottom_1" ><b>TIMER SYSTEM ADDED</br>RIFT S AND QUEST RELEASE ON MAY 21st!<br><br>Time until MAY 21st</p>
+<p id="timer" class="slidebottom_1">test</p></b>
 
   </ul>
 </div>
@@ -226,17 +271,7 @@ opacity: 0.2;
 	<img src="https://zapstergames.github.io/Home/images/V4ZapsterLogoGlitch.gif" width="400px" id="i1" class="slideimage_1">
         <p id="subbottom">Site made by Aaron Ballinger. Why are you looking down here?</p>
   </center>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-  $("#btn1").hover(function(){
-    alert("Your book is overdue.");
-    }, function(){
-    $(this).css("background-color", "pink");
-  });
 
-var d = document.getElementById("fade");
-d.classList.add("otherclass");
-
-</script>
 
 </body>
 </html>
