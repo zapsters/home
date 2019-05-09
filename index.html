@@ -1,6 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://zapstergames.github.io/Home/fonts/stylesheet.css" rel="stylesheet">
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("May 21, 2019 1:00:00").getTime();
@@ -39,38 +41,26 @@ var x = setInterval(function() {
 @import url(https://fonts.googleapis.com/css?family=Squada+One);
 body {
   padding: 20px 80px;
+  background-color: #24292E;
   background: #eee url(https://subtlepatterns.com/patterns/extra_clean_paper.png);
 }
-#sub {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
+.sub {
+  font-family: 'bauhausc_demi', sans-serif;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
   line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
-  color: #555;
   position: relative;
 }
-#timer {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
-  color: #555;
-  position: relative;
-}
-#subbottom {
+
+
+.subbottom {
 opacity: 0.2;
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
+  ont-family: 'bauhausc_demi', sans-serif;
+  color: #000;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 10px;
@@ -78,37 +68,9 @@ opacity: 0.2;
   letter-spacing: 0px;
   line-height: 1;
   text-shadow: #EDEDED 3px 2px 0;
-  color: #555;
   position: relative;
 }
-#logo {
-  font-family: 'Open Sans', sans-serif;
-  color: #555;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 150px;
-  font-weight: 800;
-  letter-spacing: -3px;
-  line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
-  position: relative;
-}
-#logo:after {
-  content:"ZapsterGames";
-  position: absolute;
-  left: 8px;
-  top: 32px;
-}
-#logo:after {
-  /*background: url(https://subtlepatterns.com/patterns/crossed_stripes.png) repeat;*/
-  background-image: -webkit-linear-gradient(left top, transparent 0%, transparent 25%, #555 25%, #555 50%, transparent 50%, transparent 75%, #555 75%);
-  background-size: 4px 4px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  z-index: -5;
-  display: block;
-  text-shadow: none;
-}
+
 #menu {
   width: 1030px;
   height: 150px;
@@ -135,7 +97,7 @@ opacity: 0.2;
   display: block;
   background: #FFF;
   padding: 2px 10px;
-  color: #333;
+  color: #000;
   font-size: 35px;
   text-align: center;
   text-decoration: none;
@@ -164,17 +126,6 @@ opacity: 0.2;
 }
 #menu a:hover {
   color: #d90075;
-}
-#menu li:after,
-#menu li:before {
-  content: '';
-  position: absolute;
-  width: 50px;
-  height: 100%;
-  background: #BBB;
-  -webkit-transform: skewY(8deg);
-  x-index: -3;
-	border-radius: 4px;
 }
 #menu li:after {
 	background-image: -webkit-linear-gradient(left, transparent 0%, rgba(0,0,0,.4) 100%);
@@ -243,11 +194,14 @@ opacity: 0.2;
   0%   {left:0px; top:-450px;}
   20% {left:0px; top:0px;}
 }
+.bannerlogo {
+   width: 80%;
+}
 </style>
-<body>
+<body >
 <center>
 <div id="header">
-  <a href="/Home/" class="slidetop_1" id="logo">ZapsterGames</a>
+  <a href="/Home/" class="slidetop_1"><img class="bannerlogo" src="https://zapstergames.github.io/Home/images/ZapsterGames_Logo_Banner.png" alt="logo"></a>
   
   <ul id="menu">
     <li class="slideleft_1" onmouseover="bhinfo()"><a href="/LyricHub/"><span><b>Lyric Hub</b></span></a></li>
@@ -260,14 +214,14 @@ opacity: 0.2;
     <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
     <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
     <br><br>
-    <p id="sub" class="slidebottom_1" ><b>TIMER SYSTEM ADDED</br>RIFT S AND QUEST RELEASE ON MAY 21st!<br><br>Time until MAY 21st</p>
-	<a id="timer" class="slidebottom_1" href="/Timer/RiftS"><p id="timer" class="slidebottom_1">test</p></b></a>
+    <p class="sub slidebottom_1" ><b>TIMER SYSTEM ADDED</br>RIFT S AND QUEST RELEASE ON MAY 21st!<br><br>Time until MAY 21st</p>
+	<a id="timer" class="sub slidebottom_1" href="/Timer/RiftS"><p id="timer" class="slidebottom_1">test</p></b></a>
 
   </ul>
 </div>
 	</br></br></br></br></br></br></br></br></br></br></br></br>
 	<img src="https://zapstergames.github.io/Home/images/V4ZapsterLogoGlitch.gif" width="400px" id="i1" class="slideimage_1">
-        <p id="subbottom">Site made by Aaron Ballinger. Why are you looking down here?</p>
+        <p class="subbottom">Site made by Aaron Ballinger. Why are you looking down here?</p>
   </center>
 
 
