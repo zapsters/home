@@ -221,13 +221,10 @@ function myFunction() {
           logo.src = "https://zapstergames.github.io/Home/images/ZapsterGames_Logo_Banner.png";
      }
 }
-
 // Set the date we're counting down to
 var countDownDate = new Date("May 21, 2019 12:00:00").getTime();
-
 // Update the count down every 1 second
 var x = setInterval(function() {
-
   // Get todays date and time
   var now = new Date().getTime();
     
@@ -241,16 +238,15 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  document.getElementById("timer").innerHTML = "</br>" + days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timer").innerHTML = "OCULUS RIFT S / QUEST IS HERE!";
+    document.getElementById("timer").innerHTML = "WELCOME TO THE FUTURE";
   }
 }, 1000);
-
 </script>
 </body>
 </html>
