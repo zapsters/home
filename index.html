@@ -191,16 +191,16 @@ opacity: 0.2;
   <ul id="menu">
     <li class="slideleft_1" ><a href="/LyricHub/"><span><b>Lyric Hub</b></span></a></li>
     <li class="slideleft_1" ><a href="/SaER/"><span>SaER</span></a></li>
-    <li class="slideright_1"><a href="/Timer/"><span>Timer</span></a></li>
+    <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
     <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
       <br> <br> <br> <br>
     <li  class="slideleft_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
     <li  class="slideleft_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
     <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
-    <li class="slideright_1"><a href="/SaER/404.html"><span>Redacted</span></a></li>
+    <li class="slideright_1"><a href="/Timer/"><span>Timer</span></a></li>
     <br><br>
-    <p class="sub slidebottom_1" ><b><a href="/SaER/" class="sublink">SaER SITE</a></br>___</p>
-	<a id="timer" class="sublink slidebottom_1" href="/Timer/RiftS"><p id="timer" class="slidebottom_1"></p></b></a>
+    <p class="sub slidebottom_1" ><b><a href="/SaER/" class="sublink">SaER SITE</a></br>OCULUS RIFT S / QUEST ARE RELEASED</p>
+	
 
   </ul>
 </div>
@@ -222,32 +222,6 @@ function myFunction() {
           logo.src = "https://zapstergames.github.io/Home/images/ZapsterGames_Logo_Banner.png";
      }
 }
-// Set the date we're counting down to
-var countDownDate = new Date("May 21, 2019 12:00:00").getTime();
-// Update the count down every 1 second
-var x = setInterval(function() {
-  // Get todays date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("timer").innerHTML = "</br>" + days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "WELCOME TO THE FUTURE";
-  }
-}, 1000);
 </script>
 </body>
 </html>
