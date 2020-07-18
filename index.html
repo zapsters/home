@@ -3,10 +3,20 @@
 <html>
 <head>
 <script>
-  var redirect = "1";
-  if (redirect = "1") {
-    window.location = "https://zapstergames.github.io/Home/CT.html";
-  }
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+var redirect = getUrlVars()["r"];
+if (typeof redirect == 'undefined') {
+  var redirect = "0";
+}
+if (redirect == "0") {
+  window.location = "https://zapstergames.github.io/Home/CT.html";
+}
 </script>
 <style type="text/css">
 body{
