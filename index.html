@@ -1,51 +1,48 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <script>
-function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
-        vars[key] = value;
-    });
-    return vars;
-}
-var redirect = getUrlVars()["r"];
-if (typeof redirect == 'undefined') {
-  var redirect = "0";
-}
-if (redirect == "0") {
-  window.location = "https://zapstergames.github.io/Home/CT.html";
+function reveal(t) {
+	switch(t) {
+		case 0:
+			document.body.style.visibility = "hidden";
+			break;
+		default:
+			alert("You are on your own Sam");
+			break;
+	}
 }
 </script>
 <style type="text/css">
 body{
-	background-image:url(https://raw.githubusercontent.com/ZapsterGames/Home/master/images/V4ZapsterLogoGlitch.gif);
+	<!--background-image:url(https://raw.githubusercontent.com/zapsters/Home/master/images/V4ZapsterLogoGlitch.gif); --->
     background-repeat: no-repeat, repeat;
     background-size: 400px;
     background-attachment: fixed;
     background-position: center;
     background-color: black;
+	margin: 0 0px;
+	padding: 0px 0px;
+	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; bottom: 0;
 }
 
 @font-face {
     font-family: 'bauhausc_demi';
-    src: url('https://zapstergames.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff2') format('woff2'),
-         url('https://zapstergames.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff') format('woff');
+    src: url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff2') format('woff2'),
+    url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
 .sub {
-  font-family: 'bauhausc_demi';
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  line-height: 1;
-  position: relative;
+	font-family: 'bauhausc_demi';
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: 0px;
+	margin: 0 0px;
+	padding: 0px 0px;
 }
 
 .sublink {
@@ -60,35 +57,77 @@ body{
   position: relative;
 }
 
-
-.subbottom {
-opacity: 0.2;
-  ont-family: 'bauhausc_demi';
-  color: #000;
-  text-decoration: none;
+.sublink:hover {
+  font-family: 'bauhausc_demi';
+  color: #fff;
+  text-decoration: underline;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
   line-height: 1;
-  text-shadow: #EDEDED 3px 2px 0;
+  position: relative;
+}
+
+.sublinkimg {
+-webkit-transition: 2s all;
+  filter: invert(0%);
+  line-height: 1;
+  position: relative;
+}
+
+.sublinkimg:hover {
+  filter: invert(100%);
+  line-height: 1;
+  position: relative;
+}
+
+
+.subhidden {
+  cursor: context-menu;
+  -webkit-transition: 2s all;	
+  opacity: 0.2;
+  font-family: 'bauhausc_demi';
+  color: #000;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1;
+  position: relative;
+}
+
+.subhidden:hover {
+  cursor: context-menu; 
+  opacity: 0.2;
+  font-family: 'bauhausc_demi';
+  color: #fff;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 1;
   position: relative;
 }
 
 #menu {
-  width: 1030px;
+  width: 100%;
   height: 150px;
   list-style: none;
-  margin: 10px 0 0 0; padding: 25px 10px;
+  margin: 10px 10px 0 0; padding: 25px 10px;
 
   position: relative;
   text-align: center;
+  margin: 0 0px;
+	padding: 40px 0px;
 }
 #menu li {
   display: inline-block;
   width: 213px;
-  margin: 0 10px;
-  padding: 60px 0px;
+  margin: 10px 10px;
+  padding: 0px 0px;
   position: relative;
   -webkit-transform: skewy(-3deg);
   -webkit-backface-visibility: hidden;
@@ -99,7 +138,7 @@ opacity: 0.2;
   font-family: bauhausc_demi;
   font-weight: 800;
   display: block;
-  background: ;
+  background: #222;
   padding: 2px 10px;
   color: #fff;
   font-size: 35px;
@@ -114,122 +153,57 @@ opacity: 0.2;
 	
 	-webkit-transition: 1s all;
 }
+
+#menu li img {
+filter: hue-rotate(180deg);
+}
+
 #menu li:hover {
 	width: 243px;
-	margin: 0 -5px;
-    
 }
 #menu a:hover {
-  color: #d90075;
-}
-#menu li:after {
-	
-  right: 0;
-  top: -4px;
-}
-#menu li:before {
-  left: 0;
-  bottom: -4px;
-	
-}
-.slideleft_1 {
-  position: relative;
-  -webkit-animation-name: slideleft; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-  animation-name: slideleft;
-  animation-duration: 4s;
-}
-@keyframes slideleft {
-  0%   {font-size: 0px; left:-700px; top:-150px;}
-  40% {left:0px; top:0px;}
-  30% {font-size: 10px;}
-  50% {font-size: 35px;}
-}
-.slideright_1 {
-  position: relative;
-  -webkit-animation-name: slideright; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-  animation-name: slideright;
-  animation-duration: 4s;
-}
-@keyframes slideright {
-  0%   {left:700px; top:-150px;}
-  40% {left:0px; top:0px;}
-    30% {font-size: 20px;}
-  50% {font-size: 35px;}
-}
-.slidetop_1 {
-  position: relative;
-  -webkit-animation-name: slidetop; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-  animation-name: slidetop;
-  animation-duration: 4s;
-}
-@keyframes slidetop {
-  0%   {opacity: 0; left:0px; top:-200px;}
-  20% {opacity: 1; left:0px; top:0px;}
-  
-}
-.slidebottom_1 {
-  position: relative;
-  -webkit-animation-name: slidebottom; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-  animation-name: slidebottom;
-  animation-duration: 4s;
-
-}
-@keyframes slidebottom {
-  0%   {left:0px; top:1500px;}
-  70% {left:0px; top:0px;}
-}
-.slideimage_1 {
-  position: relative;
-  -webkit-animation-name: slideimage; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-  animation-name: slideimage;
-  animation-duration: 4s;
-
-}
-@keyframes slideimage {
-  0%   {left:0px; top:-450px;}
-  20% {left:0px; top:0px;}
+  color: #CA1622;
 }
 .bannerlogo {
-
    width: 80%;
 }
 .bottom {
 position: absolute;
 bottom: 0;
-filter: invert(100%);
+  margin: 0 0px;
+  padding: 0px 0px;
+}
+.credit {
+	margin: 0 0px;
+	padding: 0px 0px;
+	color: #CA1622;
 }
 </style>
-	<title>ZapsterGames</title>
-	<link rel="shortcut icon" type="image/png" href="https://zapstergames.github.io/Home/images/ZapsterGames.png"/>
+	<title>ZapsterStudios</title>
+	<link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapsterGames.png"/>
 	</head>
 <body>
 <center>
 <div id="header">
-  <img class="bannerlogo" id="logo" src="https://zapstergames.github.io/Home/images/ZapsterGames_Logo_Banner_Neon.png" alt="logo" style="filter: invert(0%);">
-
+  <img class="bannerlogo" id="logo" onclick="reveal(0)" src="https://zapsters.github.io/Home/images/ZapsterStudios_Logo_Neon.png" alt="logo" style="filter: invert(0%);">
+  <p class="sub" >Learning today to Improve Your Tomorrow</p>
   <ul id="menu">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <li class="slideleft_1" ><a class="slideleft_1" href="/SaER/"><span>SaER</span></a></li>
-    <li class="slideleft_1" ><a class="slideleft_1" href="/SaER/404.html"><span><b>Redacted</b></span></a></li>
-    <li class="slideright_1"><a class="slideright_1" href="/SaER/404.html"><span>Redacted</span></a></li>
-    <li class="slideright_1"><a class="slideright_1" href="/SaER/404.html"><span>Redacted</span></a></li>
+    <li class="slideleft_1"><a class="slideleft_1" href="SaER/404.html"><span>Redacted</span></a></li>
+    <li class="slideleft_1"><a class="slideleft_1" href="SaER/404.html"><span>Redacted</b></span></a></li>
+    <li class="slideright_1"><a class="slideright_1" href="SaER/404.html"><span>Redacted</span></a></li>
+    <li class="slideright_1"><a class="slideright_1" href="SaER/404.html"><span>Redacted</span></a></li>
     <br><br>
-	  <!-- News Banner Section -->
-    <p class="sub slidebottom_1" ></p>
-    <p class="sub slidebottom_still" >ASTRO</p>
-
-
+	<!-- News Banner Section -->
+	
+	<p class="sub subhidden" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" id="hidtext1" >Dont trust them Sam</p>
   </ul>
 </div>
-<div class=bottom>
-<img class="bannerlogo" id="logo" src="https://raw.githubusercontent.com/ZapsterGames/Home/master/images/SaER_Status.png" alt="logo" style="width: 250px;">
-</div>
 </center>
+<div class=bottom>
+<a class="sublink" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; bottom: 0;"><img class="sublinkimg" src="https://zapsters.github.io/Home/images/ZapsterGames.png" style="width: 100px; margin: -10px 0px;"></a><br>
+<img class="bannerlogo" id="connection_good" src="https://raw.githubusercontent.com/zapsters/Home/master/images/SaER_Status.png" alt="Connected to SaER SERVERS" style="width: 30%; height: 30%; filter: invert(100%);">
+<img class="bannerlogo" id="connection_bad" src="https://raw.githubusercontent.com/zapsters/Home/master/images/SaER_Status_Fail.png" alt="Error connecting to SaER SERVERS" style="width: 20%; height: 20%; visibility: hidden;">
+</div>
 </body>
 
 </html>
