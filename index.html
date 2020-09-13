@@ -12,6 +12,24 @@ function reveal(t) {
 			break;
 	}
 }
+var i = 0;
+var speed = 50;
+var pos1 = 'You feel it dont you?                        Like Me?                                               Please tell me you do.';
+function typeWriter() {
+  if (i < pos1.length) {
+    document.getElementById("projectSR").innerHTML += pos1.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+document.onkeydown = logKey;
+function logKey(e) {
+	//Up arrow last command.
+	if (e.keyCode === 36) {
+		typeWriter();
+	}
+}
 </script>
 <style type="text/css">
 body{
@@ -82,6 +100,24 @@ body{
   position: relative;
 }
 
+.srdiv {
+  animation: shake 35s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(0px, -1px) rotate(-1deg); }
+  20% { transform: translate(-2px, 0px) rotate(1deg); }
+  30% { transform: translate(2px, 1px) rotate(0deg); }
+  40% { transform: translate(0px, 0px) rotate(1deg); }
+  50% { transform: translate(0px, 1px) rotate(-1deg); }
+  60% { transform: translate(-2px, 0px) rotate(0deg); }
+  70% { transform: translate(2px, 0px) rotate(-1deg); }
+  80% { transform: translate(0px, 0px) rotate(1deg); }
+  90% { transform: translate(0px, 1px) rotate(0deg); }
+  100% { transform: translate(0px, -1px) rotate(-1deg); }
+}
 
 .subhidden {
   cursor: context-menu;
@@ -134,7 +170,6 @@ body{
   -webkit-transition: 200ms all;
 }
 #menu li a {
-  text-transform: uppercase;
   font-family: bauhausc_demi;
   font-weight: 800;
   display: block;
@@ -178,6 +213,15 @@ bottom: 0;
 	padding: 0px 0px;
 	color: #CA1622;
 }
+.message {
+	font-family: 'bauhausc_demi';
+	color: #001c1a;
+	text-decoration: none;
+	font-size: 30px;
+	letter-spacing: 0px;
+	margin: 0 0px;
+	padding: 0px 0px;
+}
 </style>
 	<title>ZapsterStudios</title>
 	<link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapsterGames.png"/>
@@ -188,10 +232,10 @@ bottom: 0;
   <img class="bannerlogo" id="logo" onclick="reveal(0)" src="https://zapsters.github.io/Home/images/ZapsterStudios_Logo_Neon.png" alt="logo" style="filter: invert(0%);">
   <p class="sub" >Learning today to Improve Your Tomorrow</p>
   <ul id="menu">
-    <li class="slideleft_1"><a class="slideleft_1" href="/SaER/"><span>SAER</span></a></li>
-    <li class="slideleft_1"><a class="slideleft_1" href="/SaER/404.html"><span>Redacted</b></span></a></li>
-    <li class="slideright_1"><a class="slideright_1" href="/SaER/404.html"><span>Redacted</span></a></li>
-    <li class="slideright_1"><a class="slideright_1" href="/SaER/404.html"><span>Redacted</span></a></li>
+    <li class=""><a class="" href="/SaER/"><span>SAER</span></a></li>
+    <li class=""><a class="" href="/SaER/404.html"><span>REDACTED</b></span></a></li>
+    <li class=""><a class="" href="/SaER/404.html"><span>REDACTED</span></a></li>
+    <li class=""><a class="srdiv" href="/SaER/404.html"><span>LOCKED</span></a></li>
     <br><br>
 	<!-- News Banner Section -->
 	
@@ -200,9 +244,8 @@ bottom: 0;
 </div>
 </center>
 <div class=bottom>
+<p class="message" id="projectSR"></p>
 <a class="sublink" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; bottom: 0;"><img class="sublinkimg" src="https://zapsters.github.io/Home/images/ZapsterGames.png" style="width: 100px; margin: -10px 0px;"></a><br>
-<img class="bannerlogo" id="connection_good" src="https://raw.githubusercontent.com/zapsters/Home/master/images/SaER_Status.png" alt="Connected to SaER SERVERS" style="width: 30%; height: 30%; filter: invert(100%);">
-<img class="bannerlogo" id="connection_bad" src="https://raw.githubusercontent.com/zapsters/Home/master/images/SaER_Status_Fail.png" alt="Error connecting to SaER SERVERS" style="width: 20%; height: 20%; visibility: hidden;">
 </div>
 </body>
 
