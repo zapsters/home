@@ -2,38 +2,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-function reveal(t) {
-	switch(t) {
-		case 0:
-			document.body.style.visibility = "hidden";
-			break;
-        case 1:
-			alert("You are with your real family now");
-			break;
-		default:
-			alert("You are with your real family now");
-			break;
-	}
-}
-var i = 0;
-var speed = 50;
-var pos1 = '.  I dont want to loose you.';
-function typeWriter() {
-  if (i < pos1.length) {
-    document.getElementById("projectSR").innerHTML += pos1.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-document.onkeydown = logKey;
-function logKey(e) {
-	//Up arrow last command.
-	if (e.keyCode === 13) {
-		typeWriter();
-	}
-}
-</script>
 <style type="text/css">
 body{
 	<!--background-image:url(https://raw.githubusercontent.com/zapsters/Home/master/images/V4ZapsterLogoGlitch.gif); --->
