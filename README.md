@@ -1,1 +1,1 @@
-# Main Webpage for the ZapsterGames Series
+# Main homepage for ZapsterStudios
