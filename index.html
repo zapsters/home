@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,24 +7,34 @@ function reveal(t) {
 		case 0:
 			document.body.style.visibility = "hidden";
 			break;
-        case 1:
-			alert("You are with your real family now");
-			break;
 		default:
-			alert("You are with your real family now");
+			alert("You are on your own Sam");
 			break;
 	}
 }
 var i = 0;
 var speed = 50;
-var pos1 = '.  I dont want to lose you.';
+var pos1 = 'SAER WAS ESTABLISHED TO KEEP YOUR VOICED SILENCED';
 function typeWriter() {
   if (i < pos1.length) {
     document.getElementById("projectSR").innerHTML += pos1.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
-  }
+  } else {
+	i++
+		if (i < pos1.length + 100 && pos1 == 'SAER WAS ESTABLISHED TO KEEP YOUR VOICED SILENCED') {
+			document.getElementById("projectSR").innerHTML = "";
+			pos1 = 'FIGHT AGAINST THE MACHINE';
+			i = 0;
+			typeWriter();
+		} else {
+			document.getElementById("projectSR").innerHTML = "";
+		}
+	}
 }
+
+
+
 document.onkeydown = logKey;
 function logKey(e) {
 	//Up arrow last command.
@@ -36,16 +45,15 @@ function logKey(e) {
 </script>
 <style type="text/css">
 body{
-	<!--background-image:url(https://raw.githubusercontent.com/zapsters/Home/master/images/V4ZapsterLogoGlitch.gif); --->
+	<!--background-image:url(https://raw.githubusercontent.com/zapsters/Home/master/images/V4ZapsterLogoGlitch.gif);
     background-repeat: no-repeat, repeat;
     background-size: 400px;
-    background-attachment: fixed;
+    background-attachment: fixed;--->
     background-position: center;
     background-color: black;
 	margin: 0 0px;
 	padding: 0px 0px;
-	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; bottom: 0;
-}
+	}
 
 @font-face {
     font-family: 'bauhausc_demi';
@@ -55,11 +63,13 @@ body{
     font-style: normal;
 
 }
+.uppercase {
+	text-transform: uppercase;
+}
 .sub {
 	font-family: 'bauhausc_demi';
 	color: #fff;
 	text-decoration: none;
-	text-transform: uppercase;
 	font-size: 30px;
 	letter-spacing: 0px;
 	margin: 0 0px;
@@ -69,8 +79,6 @@ body{
 .sublink {
   font-family: 'bauhausc_demi';
   color: #000;
-  text-decoration: underline;
-  text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
@@ -81,8 +89,6 @@ body{
 .sublink:hover {
   font-family: 'bauhausc_demi';
   color: #fff;
-  text-decoration: underline;
-  text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
@@ -121,15 +127,15 @@ body{
   90% { transform: translate(0px, 1px) rotate(0deg); }
   100% { transform: translate(0px, -1px) rotate(-1deg); }
 }
-
+.underline {
+  text-decoration: underline;
+}
 .subhidden {
   cursor: context-menu;
   -webkit-transition: 2s all;	
   opacity: 0.2;
   font-family: 'bauhausc_demi';
   color: #000;
-  text-decoration: underline;
-  text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
@@ -142,8 +148,6 @@ body{
   opacity: 0.2;
   font-family: 'bauhausc_demi';
   color: #fff;
-  text-decoration: underline;
-  text-transform: uppercase;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
@@ -195,7 +199,6 @@ body{
 #menu li img {
 filter: hue-rotate(180deg);
 }
-
 #menu li:hover {
 	width: 243px;
 }
@@ -204,6 +207,7 @@ filter: hue-rotate(180deg);
 }
 .bannerlogo {
    width: 80%;
+   padding: 10px 0px;
 }
 .bottom {
 position: absolute;
@@ -225,6 +229,9 @@ bottom: 0;
 	margin: 0 0px;
 	padding: 0px 0px;
 }
+.hidden {
+	display: none;
+}
 </style>
 	<title>ZapsterStudios</title>
 	<link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapsterGames.png"/>
@@ -233,16 +240,26 @@ bottom: 0;
 <center>
 <div id="header">
   <img class="bannerlogo" id="logo" onclick="reveal(0)" src="https://zapsters.github.io/Home/images/ZapsterStudios_Logo_Neon.png" alt="logo" style="filter: invert(0%);">
-  <p class="sub" >Learning today to Improve Your Tomorrow</p>
+  <p class="sub uppercase" style="font-size: 30px; ">Learning today to Improve Your Tomorrow</p>
+  <hr>
+  <!--Projects -->
   <ul id="menu">
-    <li class=""><a class="" href="/SaER/"><span>SAER</span></a></li>
-    <li class=""><a class="" href="/FILES/"><span>REDACTED</b></span></a></li>
-    <li class=""><a class="" href="/REDACTED/"><span>REDACTED</span></a></li>
-    <li class=""><a class="" href="/Home/lost.html"><span>CORE 3</span></a></li>
+	<p class="sub" style="font-size: 40px; color: #fff;"><u>Science and Entity Research</u></p>
+    <li class=""><a class="" href="/SaER/"><span>Console</span></a></li>
+    <li class="hidden"><a class="" href="/SaER/404.html"><span>REDACTED</b></span></a></li>
+    <li class="hidden" style="display: none;"><a href="/SaER/404.html"><span>LOCKED</span></a></li>
+    <li class="hidden" style="display: none;"><a href="/SaER/404.html"><span>LOCKED</span></a></li>
     <br><br>
-	<!-- News Banner Section -->
+	<p class="sub subhidden" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" id="hidtext1" >i have accepted it. im living my life<br>with or without you.</p>
+  </ul>
+  <!--Personal -->
+  <ul id="menu">
+	<p class="sub" style="font-size: 40px; color: #fff;"><u>PERSONAL</u></p>
+    <li class=""><a class="" href="/SaER/"><span>under construction</span></a></li>
+    <li class="hidden" style="display: none;"><a class="" href="/SaER/404.html"><span>LOCKED</b></span></a></li>
+    <br><br>
 	
-	<p class="sub subhidden" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" id="hidtext1" >Dont trust them Sam</p>
+	<p class="sub subhidden" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" id="hidtext1" >yes sir</p>
   </ul>
 </div>
 </center>
