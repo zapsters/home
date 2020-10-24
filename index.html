@@ -201,25 +201,14 @@ position: fixed;
 	<p class="sub" style="font-size: 40px; color: #fff; padding: 20px 0px 0px 0px" ><u>Projects</u></p>
   <div class="menu">
     <li class="" onmouseover="showCaption(1)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/WritingAssault/"><span>WritingAssault</span></a></li>
-    <li class="" onmouseover="showCaption(2)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/SaER/"><span>Console</span></a></li>
-    <li class="" onmouseover="showCaption(3)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href=""><span>LOCKED</span></a></li>
+    <li class="" onmouseover="showCaption(2)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/Project0/"><span>Project0</span></a></li>
+    <li class="" onmouseover="showCaption(3)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/SaER/"><span>Console</span></a></li>
     <li class="hidden" onmouseover="showCaption(4)" onmouseleave="showCaption(0)" style="display: none;"><a class="" style="font-family: 'supria_sans';" href=""><span>LOCKED</span></a></li>
 		<div class="menu_subheading">
 			<p style="font-family: 'supria_sans'; padding: 10px 0px 0px 0px;" class="sub" id="projects_captiontext">text</p>
 		</div>
 </div>
 <br><br><br>
-<!--Projects -->
-<p class="sub" style="font-size: 40px; color: #fff; padding: 0px 0px 0px 0px;"><u></u></p>
-<div class="menu" style="display: none">
-	<li class="" style="display: none;"><a class="" href=><span>LOCKED</span></a></li>
-	<li class="" style="display: none;"><a class="" href=><span>LOCKED</span></a></li>
-	<li class="" style="display: none;"><a class="" href=><span>LOCKED</span></a></li>
-	<li class="" style="display: none;"><a class="" href=><span>LOCKED</span></a></li>
-	<div class="menu_subheading">
-		<p style="font-family: 'supria_sans'; padding: 10px 0px 0px 0px;" class="sub" id="personal_captiontext">text</p>
-	</div>
-</div>
 
 
 </div>
@@ -261,7 +250,6 @@ function typeWriter() {
 	}
 }
 function showCaption(id) {
-	console.log(id)
 	switch(id) {
 		case 0:
 		document.getElementById('projects_captiontext').innerHTML = ""
@@ -270,10 +258,10 @@ function showCaption(id) {
 		document.getElementById('projects_captiontext').innerHTML = "An online game to play with friends. One imposter in your group. Can you pick out their answer and vote them off?"
 		break;
 		case 2:
-		document.getElementById('projects_captiontext').innerHTML = "A virtual console apart of the Science and Entity Research universe."
+		document.getElementById('projects_captiontext').innerHTML = "A collection of incomplete or experimental websites."
 		break;
 		case 3:
-		document.getElementById('projects_captiontext').innerHTML = "LOCKED"
+		document.getElementById('projects_captiontext').innerHTML = "A virtual console apart of the Science and Entity Research universe."
 		break;
 	}
 }
