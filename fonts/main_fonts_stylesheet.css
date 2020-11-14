@@ -1,3 +1,14 @@
+/* upheavtt.woff 100% FREE */
+@font-face {
+    font-family: upheavtt;
+    src: url('https://zapsters.github.io/Home/fonts/upheavtt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.upheavtt {
+    font-family: 'upheavtt';
+}
+
 /* https://www.dafontfree.net/freefonts-miso-f92845.htm */
 @font-face {
     font-family: miso-bold;
