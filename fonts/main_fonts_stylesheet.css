@@ -1,3 +1,15 @@
+/* https://www.dafontfree.net/freefonts-miso-f92845.htm */
+@font-face {
+    font-family: miso-bold;
+    src: url('https://zapsters.github.io/Home/fonts/miso-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.misobold {
+    font-family: 'miso-bold';
+}
+
+/* The fonts below are NOT for commercial use. Im trying to move away from these fonts */
 @font-face {
     font-family: 'bauhausc_demi_ff';
     src: url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff2') format('woff2'),
