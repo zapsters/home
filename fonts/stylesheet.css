@@ -8,5 +8,16 @@
          url('https://zapstergames.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
+}
+.bauhausc_demi {
+    font-family: 'bauhausc_demi';
+}
+@font-face {
+    font-family: supria_sans;
+    src: url('https://zapsters.github.io/Home/fonts/SupriaSans-Bold.woff') format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+.supria_sans {
+    font-family: 'supria_sans';
 }
