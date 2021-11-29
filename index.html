@@ -201,10 +201,10 @@ position: fixed;
 <p class="sub" style="font-size: 40px; color: #fff; padding: 20px 0px 0px 0px" ><u>Projects</u></p>
 <div class="menu">
 <li class="" onmouseover="showCaption(1)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/SaER/"><span>Console</span></a></li>
-<li class="" onmouseover="showCaption(2)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/Project0/"><span>Project0</span></a></li>
-<li class="" onmouseover="showCaption(3)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/WritingAssault/"><span>Writing Assault</span></a></li>
-<li class="" onmouseover="showCaption(4)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/CAH/"><span>COMING SOON!</span></a></li>
-	<div class="menu_subheading">
+<li class="" onmouseover="showCaption(2)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/WritingAssault/"><span>Writing Assault</span></a></li>
+<li class="" onmouseover="showCaption(3)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/CAH/"><span>COMING SOON!</span></a></li>
+<li class="" onmouseover="showCaption(4)" onmouseleave="showCaption(0)"><a class="" style="font-family: 'supria_sans';" href="/Project0/"><span>Project0</span></a></li>
+	<br><div class="menu_subheading">
 		<p style="font-family: 'supria_sans'; padding: 10px 0px 0px 0px;" class="sub" id="projects_captiontext"></p>
 	</div>
 </div><br><br><br>
@@ -219,12 +219,12 @@ position: fixed;
 <script>
 function reveal(t) {
 	switch(t) {
-		case 0:
-			document.body.style.visibility = "hidden";
-			break;
-		case 1:
+	case 0:
+		document.body.style.visibility = "hidden";
+		break;
+	case 1:
         	replaceTextTemp(document.getElementById("projectSR"), 'You are on your own Sam...', true, 3400);
-			break;
+		break;
 	}
 }
 
@@ -251,16 +251,16 @@ function showCaption(id) {
 		document.getElementById('projects_captiontext').innerHTML = ""
 		break;
 		case 1:
-    document.getElementById('projects_captiontext').innerHTML = "A virtual console apart of the Science and Entity Research universe."
+    		document.getElementById('projects_captiontext').innerHTML = "A virtual console apart of the Science and Entity Research universe."
 		break;
 		case 2:
-    document.getElementById('projects_captiontext').innerHTML = "A collection of websites created by me that do not fit here."
-		break;
-		case 3:
 		document.getElementById('projects_captiontext').innerHTML = "Writing AssaultV2 - One traitor! Can you find the odd one out?"
 		break;
-		case 4:
+		case 3:
 		document.getElementById('projects_captiontext').innerHTML = "COMING SOON"
+		break;
+		case 4:
+    		document.getElementById('projects_captiontext').innerHTML = "A collection of websites created by me that do not fit here."
 		break;
 	}
 }
@@ -271,8 +271,8 @@ function logKey(e) {
 	//Up arrow last command.
 	if (e.keyCode === 13) {
     	if(var_22 == false) {
-			function_22();
-		}
+		function_22();
+	}
     }
 }
 </script>
