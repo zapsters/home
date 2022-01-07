@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,8 @@ body{
     background-color: black;
     margin: 0 0px;
     padding: 0px 0px;
+    color: white;
+    font-family: 'supria_sans';
 }
 
 @font-face {
@@ -19,10 +22,17 @@ body{
     url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
+@font-face {
+    font-family: supria_sans;
+    src: url('https://zapsters.github.io/Home/fonts/SupriaSans-Bold.woff') format('woff');
+	font-weight: normal;
+    font-style: normal;
+}
+
 .sub {
-	font-family: 'bauhausc_demi';
+	font-family: 'supria_sans';
 	color: #fff;
 	text-decoration: none;
 	font-size: 15px;
@@ -30,25 +40,117 @@ body{
 	margin: 0 0px;
 	padding: 0px 0px;
 }
+.content {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.dirButton {
+  width: 140px;
+  padding: 0px 18px 0px 18px;
+  margin: 0px 18px 0px 18px;
+  height: 40px;
+  background-color: #444;
+  color: white;
+  border: 4px solid #999;
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.dirButton:enabled:hover {
+  border: 4px solid white;
+  cursor: pointer;
+}
+.dirButton:disabled {
+  color: rgba(255, 255, 255, 0.2);
+}
 </style>
 	<title> </title>
 	<link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapsterGames.png"/>
 	</head>
 <body>
 <center>
-<div id="header">
-
-  <ul id="menu">
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br>
+<div id="content">
+    <p>see other entries.</p>
+    <input type="button" value="LEFT" onclick="leftButton()" class="dirButton" id="leftButtonELM"></input>
+    <input type="button" value="RIGHT" onclick="rightButton()" class="dirButton" id="rightButtonELM"></input>
+	<div class="center" id="contentDiv">
 	  <!-- News Banner Section -->
-    <p class="sub" >I AM LOST.<br><br>I DON'T KNOW WHERE TO GO</p><br><br><br>
-	  <p class="sub" style="color:#444">but i feel like we can help each other get through it</p>
-
-
-  </ul>
+    	<p class="sub" id="LINE_01">Error reading content :)</p>
+    </div>
+    
 </div>
 </center>
 </body>
+<script>
+var content_array = [
+	{
+    	name: "entry 1",
+    	content: "<!-- ENTRY 1 --> <p class='sub' >I AM LOST.<br><br>I DON'T KNOW WHERE TO GO</p><br<br><br> <p class='sub' style='color:#444'>but i feel like we can help each other get through it</p>"
+    }, {
+    	name: "entry 2",
+    	content: "<!-- ENTRY 2 --> <p class='sub' id='LINE_01'>I think I am finding myself.</p> <br> <p class='sub' id='LINE_02'>It is a journey.</p> <br><br><br> <p class='sub' id='LINE_03' style='color:#888'>and i feel like we can help each other get through it</p>"
+    }
+];
 
+
+function updateContentBox(entryID) {
+	//Change Content
+    contentDiv.innerHTML = content_array[entryID].content;
+    
+    //Check if earlier entries exist, if true.
+    if(entryID != 0) {
+        document.getElementById('leftButtonELM').value = content_array[entryID - 1].name;
+    }
+    
+    //Check if newer entries exist.
+    if(entryID < content_array.length - 1) {
+        document.getElementById('rightButtonELM').value = content_array[entryID + 1].name;
+    }
+    
+    //Enable buttons by default
+    document.getElementById('leftButtonELM').disabled = false;
+    document.getElementById('rightButtonELM').disabled = false;
+    
+    //Disable buttons if no more entries.
+    if(current_entry_id == 0) {
+    	document.getElementById('leftButtonELM').value = "...";
+        document.getElementById('leftButtonELM').disabled = true;
+    }
+    
+    if(current_entry_id == content_array.length - 1) {
+    	document.getElementById('rightButtonELM').value = "...";
+        document.getElementById('rightButtonELM').disabled = true;
+    }
+}
+
+
+var current_entry_id = content_array.length - 1;
+updateContentBox(current_entry_id);
+
+
+function leftButton() {
+	if(content_array[current_entry_id - 1] == undefined) {return;}
+	current_entry_id--;
+    updateContentBox(current_entry_id);
+}
+
+function rightButton() {
+	if(content_array[current_entry_id + 1] == undefined) {return;}
+	current_entry_id++;
+    updateContentBox(current_entry_id);
+}
+
+//Get the latest entry in content array
+</script>
 </html>
