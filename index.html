@@ -1,223 +1,323 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style type="text/css">
-@font-face {
-    font-family: supria_sans;
-    src: url('https://zapsters.github.io/Home/fonts/SupriaSans-Bold.woff') format('woff');
-	font-weight: normal;
-    font-style: normal;
-}
+   <head>
+      <style type="text/css">
+         @font-face {
+           font-family: supria_sans;
+           src: url('https://zapsters.github.io/Home/fonts/SupriaSans-Bold.woff') format('woff');
+           font-weight: normal;
+           font-style: normal;
+         }
 
-body{
-	background-image:url(https://raw.githubusercontent.com/zapsters/Home/master/images/V4ZapsterLogoGlitch.gif);
-    background-repeat: no-repeat, repeat;
-    background-size: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-color: #D2B48C;
-	margin: 0 0px;
-	padding: 0px 0px;
-    font-family: 'supria_sans'
-}
+         body {
+           background-image:url(https://raw.githubusercontent.com/zapsters/Home/master/images/V4ZapsterLogoGlitch.gif);
+           background-repeat: no-repeat, repeat;
+           background-size: 400px;
+           background-attachment: fixed;
+           background-position: center;
+           background-color: #D2B48C;
+           margin: 0 0px;
+           padding: 0px 0px;
+           font-family: 'supria_sans'
+         }
 
-.header {
-	border-bottom-style: solid;
-    border-width: 5px;
-    background-color: #ebddca;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    text-align: center;
-}
-.headerlogo {
-   width: 80%;
-	max-width: 868px;
-   padding: 10px 0px;
-}
+         .header {
+           border-bottom-style: solid;
+           border-width: 2px;
+           background-color: #ebddca;
+           // position: sticky;
+           top: 0;
+           z-index: 10;
+           text-align: center;
+         }
 
-.sub {
-	color: #000;
-	text-decoration: none;
-	font-size: 30px;
-	letter-spacing: 0px;
-	margin: 0 0px;
-	padding: 0px 0px;
-}
+         .headerlogo {
+           width: 90%;
+           max-width: 668px;
+           padding: 10px 0px;
+         }
 
-.sublink {
-  font-size: 30px;
-  color: #000;
-  font-weight: 500;
-  letter-spacing: 0px;
-  line-height: 1;
-  position: relative;
-}
+         .sub {
+           color: #000;
+           text-decoration: none;
+           font-size: 30px;
+           letter-spacing: 0px;
+           margin: 0 0px;
+           padding: 0px 0px;
+         }
 
-.sublink:hover {w
-  opacity: 1;
-  color: #000;
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  line-height: 1;
-  position: relative;
-}
+         .hiddenImage {
+           -webkit-transition: 1s all;
+           line-height: 1;
+           position: relative;
+           opacity: 0;
+         }
 
-.sublinkimg {
-  -webkit-transition: 1s all;
-  line-height: 1;
-  position: relative;
-  opacity: 0;
-}
+         .hiddenImage:hover {
+           opacity: 1;
+         }
 
-.sublinkimg:hover {
-  opacity: 1;
-}
+         .BtnContainer {
+           display: inline-block;
+           width: 260px;
+           margin: 10px 10px 0px;
+           padding: 0px 0px 0px;
+           position: relative;
+         }
 
-.srdiv {
-  animation: shake 35s;
-  animation-iteration-count: infinite;
-}
+         .linkButton {
+           font-weight: 800;
+           display: block;
+           background: #222;
+           color: #fff;
+           font-size: 25px;
+           height: 50px;
+           text-align: center;
+           text-decoration: none;
+         }
 
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(0px, -1px) rotate(-1deg); }
-  20% { transform: translate(-2px, 0px) rotate(1deg); }
-  30% { transform: translate(2px, 1px) rotate(0deg); }
-  40% { transform: translate(0px, 0px) rotate(1deg); }
-  50% { transform: translate(0px, 1px) rotate(-1deg); }
-  60% { transform: translate(-2px, 0px) rotate(0deg); }
-  70% { transform: translate(2px, 0px) rotate(-1deg); }
-  80% { transform: translate(0px, 0px) rotate(1deg); }
-  90% { transform: translate(0px, 1px) rotate(0deg); }
-  100% { transform: translate(0px, -1px) rotate(-1deg); }
-}
+         .linkButton:hover {
+           color: #ed3474;
+         }
 
-.BtnContainer {
-  display: inline-block;
-  width: 260px;
-  margin: 10px 10px 0px;
-  padding: 0px 0px 0px;
-  position: relative;
-}
-.linkButton {
-  font-weight: 800;
-  display: block;
-  background: #222;
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-  text-decoration: none;
-  position: relative;
-}
-.linkButton:hover {
-  color: #CA1622;
-}
+         .bottom {
+           position: fixed;
+           bottom: 0;
+           margin: 0 0px;
+           padding: 0px 0px;
+         }
 
-.bottom {
-position: fixed;
-	bottom: 0;
-  margin: 0 0px;
-  padding: 0px 0px;
-}
-.hidden {
-	display: none;
-}
-</style>
-	<title>ZapsterStudios</title>
-	<link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapsterGames.png"/>
-	</head>
-<body>
+         .entryParentContainer {
+            background-color: transparent;
+            padding: 10px 10px 10px 10px;
+            margin: auto;
+            width: 90%;
+            // border: solid 1px;
+         }
 
-<div class="header">
-  <img class="headerlogo" id="logo" onclick="reveal(1)" src="https://zapsters.github.io/Home/images/ZapsterStudios_Logo_Neon.png" alt="logo" style="filter: invert(0%);">
-  <p class="sub" style="font-size: 30px;" id="projectSR">Learning today to Improve Your Tomorrow</p>
-</div>
+         .entryContainer {
+           margin: auto;
+           background-color: #ebddca;
+           max-width: 900px;
+           border: solid 2px;
+           min-height: 230px;
+           margin-bottom: 30px;
+           position: relative;
+           overflow: hidden;
+         }
+
+         .entryContainer p {
+           margin: 0;
+         }
+
+         .entryTitleDiv {
+           border-bottom: solid 2px black;
+           font-size: 30px;
+           min-height: 35px;
+           padding: 4px 4px 2px 4px;
+           color: #ed3474;
+           text-shadow: 2px 2px 2px #222;
+         }
+
+         .entryTitleDiv:hover {
+           cursor: pointer;
+           color: #c21f4d;
+           text-shadow: 2px 2px 3px #000;
+         }
+
+         .entryContent {
+           font-size: 18px;
+           position: absolute;
+           min-height: 210px;
+           padding: 5px 10px 10px 7px;
+           margin-right: -7px;
+         }
+
+         .entryContainer .BtnContainer {
+           position: absolute;
+           bottom: 5px;
+         }
+
+         .statDIVR {
+           position: absolute;
+           right: 5px;
+           bottom: 2px;
+           text-align: right;
+           font-size: 16px;
+           line-height: 20px;
+         }
+
+         .statDIVL {
+           position: absolute;
+           left: 7px;
+           bottom: 2px;
+           text-align: left;
+           font-size: 16px;
+           line-height: 20px;
+         }
+
+         .footer {
+            left: 0;
+            bottom: 0;
+            width: 90%;
+            max-width: 950px;
+            margin: auto;
+            background-color: #ebddca;
+            color: black;
+            padding: 2px;
+            border: solid 2px black;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+
+          .footer p {padding: 0; margin: 0;}
+
+      </style>
+      <title>Zapsters</title>
+      <link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapsterGames.png"/>
+   </head>
+   <body>
+     <!--HEADER -->
+      <div class="header">
+         <img class="headerlogo" id="logo" onclick="reveal(1)" src="https://zapsters.github.io/Home/images/ZapsterStudios_Logo_Neon.png" alt="logo" style="filter: invert(0%);">
+         <p class="sub" style="font-size: 20px;" id="projectSR">Learning today to Improve Your Tomorrow</p>
+      </div>
+      <br>
+
+      <!--Old Projects Div -->
+      <!-- I might bring this back. -->
+      <div style="text-align: center; display: none;">
+         <li class="BtnContainer" onmouseover="showCaption(1)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/SaER/"><span>Console</span></a></li>
+         <li class="BtnContainer" onmouseover="showCaption(2)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/WritingAssault/"><span>Writing Assault</span></a></li>
+         <li class="BtnContainer" onmouseover="showCaption(3)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/CAH/"><span>COMING SOON!</span></a></li>
+         <li class="BtnContainer" onmouseover="showCaption(4)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/Project0/"><span>Project0</span></a></li>
+         <br><br>
+         <p style="font-family: 'supria_sans'; padding: 10px 0px 0px 0px;" class="sub" id="projects_captiontext"></p>
+      </div>
+
+      <!--Projects -->
+      <p class="sub" style="text-align: center; font-size: 30px; padding: 20px 0px 0px 0px" ><u>Projects</u></p>
+
+      <div class="entryParentContainer">
+        <div class="entryContainer">
+          <div class="entryTitleDiv">
+            <p onclick="location.href='/InputStack';">Input Stack!</p>
+          </div>
+          <div class="entryContent">
+            <p>An online singleplayer or multiplayer game of crazy proportions. Go in alone, or with friends, and face an infinitely growing list of modules.</p>
+            <br><p>Modules slowly spawn in, needing more work the more work needed. It is a stressful, but enjoyable experience.</p>
+          </div>
+          <div class="statDIVR">
+            <p>Version: Beta 0.9</p>
+            <p>One or more players</p>
+          </div>
+          <div class="statDIVL">
+            <p>[In Development]</p>
+          </div>
+        </div>
 
 
-<!--Projects -->
-<br>
-<p class="sub" style="text-align: center; font-size: 40px; padding: 20px 0px 0px 0px" ><u>Projects</u></p>
-<div style="text-align: center;">
-  <li class="BtnContainer" onmouseover="showCaption(1)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/SaER/"><span>Console</span></a></li>
-  <li class="BtnContainer" onmouseover="showCaption(2)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/WritingAssault/"><span>Writing Assault</span></a></li>
-  <li class="BtnContainer" onmouseover="showCaption(3)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/CAH/"><span>COMING SOON!</span></a></li>
-  <li class="BtnContainer" onmouseover="showCaption(4)" onmouseleave="showCaption(0)"><a class="linkButton" style="font-family: 'supria_sans';" href="/Project0/"><span>Project0</span></a></li>
-      <br><br>
-      <p style="font-family: 'supria_sans'; padding: 10px 0px 0px 0px;" class="sub" id="projects_captiontext"></p>
-</div><br><br><br>
-
-</div>
-<div class=bottom>
-<a class="sublink" style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; bottom: 0;"><img class="sublinkimg" src="https://zapsters.github.io/Home/images/ZapsterGames.png" style="width: 100px; margin: -10px 0px;"></a><br>
-</div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="entryContainer">
+          <div class="entryTitleDiv">
+            <p onclick="location.href='/SaER';">Science and Entity Research Console</p>
+          </div>
+          <div class="entryContent">
+            <p>A website connected to the SaER universe.</p>
+          </div>
+          <div class="statDIVL">
+            <p>Property of Science and Entity Research, 2021</p>
+          </div>
+        </div>
 
 
-<script>
-function reveal(t) {
-	switch(t) {
-	case 0:
-		document.body.style.visibility = "hidden";
-		break;
-	case 1:
-        	replaceTextTemp(document.getElementById("projectSR"), "Chloe's Home Page", true, 3400);
-		break;
-	}
-}
-
-var_22 = false;
-function function_22() {
-  var_22 = true;
-  var secretP = document.getElementById("projectSR");
-  replaceTextTemp(secretP, 'SAER WAS ESTABLISHED TO KEEP YOUR VOICED SILENCED', true, 2000);
-}
-
-function replaceTextTemp(element, changeToString, doRevert, timeToWait) {
-	var old_text = element.innerHTML;
-	element.innerHTML = changeToString;
-    if(doRevert) {
-		setTimeout(function() { 
-        	element.innerHTML = old_text; var_22 = false;
-		}, timeToWait);
-    }
-}
-
-function showCaption(id) {
-	switch(id) {
-		case 0:
-		document.getElementById('projects_captiontext').innerHTML = ""
-		break;
-		case 1:
-    		document.getElementById('projects_captiontext').innerHTML = "A virtual console connected to the Science and Entity Research universe."
-		break;
-		case 2:
-		document.getElementById('projects_captiontext').innerHTML = "Writing AssaultV2 - One traitor! Can you find the odd one out?"
-		break;
-		case 3:
-		document.getElementById('projects_captiontext').innerHTML = "COMING SOON"
-		break;
-		case 4:
-    		document.getElementById('projects_captiontext').innerHTML = "A collection of websites created by me that do not fit here."
-		break;
-	}
-}
+        <div class="entryContainer">
+          <div class="entryTitleDiv">
+            <p onclick="location.href='/WritingAssault';">Writing Assault V2</p>
+          </div>
+          <div class="entryContent">
+            <p>Answer prompts and try to find the odd one out. <br> Can you find the odd one out?</p>
+          </div>
+          <div class="statDIVR">
+            <p>Released, Early 2021</p>
+            <p>Three or more players</p>
+          </div>
+        </div>
 
 
-document.onkeydown = logKey;
-function logKey(e) {
-	//Up arrow last command.
-	if (e.keyCode === 13) {
-    	if(var_22 == false) {
-		function_22();
-	}
-    }
-}
-</script>
+        <div class="entryContainer">
+          <div class="entryTitleDiv">
+            <p onclick="location.href='/Project0';">Project0</p>
+          </div>
+          <div class="entryContent">
+            <p>A collection of websites created by me that do not fit here. Some side projects that are simple or unfinished.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <p>Made with love by Chloe <3</p>
+      </div>
+
+      <!-- Secret Bottom Div -->
+      <div class=bottom>
+         <a style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; bottom: 0;"><img class="hiddenImage" src="https://zapsters.github.io/Home/images/ZapsterGames.png" style="width: 100px; margin: -10px 0px;"></a><br>
+      </div>
 
 
-</body>
+      <script>
+         function reveal(t) {
+         	switch(t) {
+         	case 0:
+         		document.body.style.visibility = "hidden";
+         		break;
+         	case 1:
+            replaceTextTemp(document.getElementById("projectSR"), 'You are on your own Chloe...', true, 1400);
+         		break;
+         	}
+         }
 
+         function replaceTextTemp(element, changeToString, doRevert, timeToWait) {
+           	var old_text = element.innerHTML;
+           	element.innerHTML = changeToString;
+            if(doRevert) {
+              setTimeout(function() {
+              element.innerHTML = old_text;
+              }, timeToWait);
+            }
+         }
+
+
+         document.getElementById('projects_captiontext').innerHTML = "<wbr>"
+         function showCaption(id) {
+         	switch(id) {
+         		case 0:
+         		document.getElementById('projects_captiontext').innerHTML = "<wbr>"
+         		break;
+         		case 1:
+             		document.getElementById('projects_captiontext').innerHTML = "A virtual console connected to the Science and Entity Research universe."
+         		break;
+         		case 2:
+         		document.getElementById('projects_captiontext').innerHTML = "Writing AssaultV2 - One traitor! Can you find the odd one out?"
+         		break;
+         		case 3:
+         		document.getElementById('projects_captiontext').innerHTML = "COMING SOON"
+         		break;
+         		case 4:
+             		document.getElementById('projects_captiontext').innerHTML = "A collection of websites created by me that do not fit here."
+         		break;
+         	}
+         }
+
+        document.onkeydown = logKey;
+        function logKey(e) {
+          //Up arrow last command.
+          if (e.keyCode === 13) {
+             var secretP = document.getElementById("projectSR");
+             replaceTextTemp(secretP, 'SAER WAS ESTABLISHED TO KEEP YOUR VOICED SILENCED', true, 2000);
+          }
+        }
+      </script>
+   </body>
 </html>
