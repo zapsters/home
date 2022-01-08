@@ -51,6 +51,7 @@
            line-height: 1;
            position: relative;
            opacity: 0;
+           filter: invert(1);
          }
 
          .hiddenImage:hover {
@@ -119,7 +120,11 @@
            text-shadow: 2px 2px 2px #222;
          }
 
-         .entryTitleDiv:hover {
+         .entryTitleDiv a {
+           color: #ed3474;
+         }
+
+         .entryTitleDiv a:hover {
            cursor: pointer;
            color: #c21f4d;
            text-shadow: 2px 2px 3px #000;
@@ -168,7 +173,7 @@
             border: solid 2px black;
             text-align: center;
             margin-top: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 90px;
           }
 
           .footer p {padding: 0; margin: 0;}
@@ -202,7 +207,7 @@
       <div class="entryParentContainer">
         <div class="entryContainer">
           <div class="entryTitleDiv">
-            <p onclick="location.href='/InputStack';">Input Stack!</p>
+            <a href="/InputStack">Input Stack!</a>
           </div>
           <div class="entryContent">
             <p>An online singleplayer or multiplayer game of crazy proportions. Go in alone, or with friends, and face an infinitely growing list of modules.</p>
@@ -220,7 +225,7 @@
 
         <div class="entryContainer">
           <div class="entryTitleDiv">
-            <p onclick="location.href='/SaER';">Science and Entity Research Console</p>
+            <a href="/SaER">Science and Entity Research Console</a>
           </div>
           <div class="entryContent">
             <p>A website connected to the SaER universe.</p>
@@ -233,7 +238,7 @@
 
         <div class="entryContainer">
           <div class="entryTitleDiv">
-            <p onclick="location.href='/WritingAssault';">Writing Assault V2</p>
+            <a href="/WritingAssault">Writing Assault V2</a>
           </div>
           <div class="entryContent">
             <p>Answer prompts and try to find the odd one out. <br> Can you find the odd one out?</p>
@@ -247,7 +252,7 @@
 
         <div class="entryContainer">
           <div class="entryTitleDiv">
-            <p onclick="location.href='/Project0';">Project0</p>
+            <a href="/Project0">Project0</a>
           </div>
           <div class="entryContent">
             <p>A collection of websites created by me that do not fit here. Some side projects that are simple or unfinished.</p>
