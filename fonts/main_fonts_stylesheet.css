@@ -16,47 +16,19 @@
     font-weight: normal;
     font-style: normal;
 }
-.upheavtt {
+.upheavttFont {
     font-family: 'upheavtt';
 }
 
-/* https://www.dafontfree.net/freefonts-miso-f92845.htm */
+/* FREE */
 @font-face {
-    font-family: miso-bold;
-    src: url('https://zapsters.github.io/Home/fonts/miso-bold.woff') format('woff');
+    font-family: 'Bahnschrift';
+    src: url('Bahnschrift.woff2') format('woff2'),
+        url('Bahnschrift.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
-.misobold {
-    font-family: 'miso-bold';
-}
-
-/* The fonts below are NOT for commercial use. Im trying to move away from these fonts */
-@font-face {
-    font-family: 'bauhausc_demi_ff';
-    src: url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff2') format('woff2'),
-    url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-.bauhausc_demi {
-    font-family: 'bauhausc_demi_ff';
-}
-@font-face {
-    font-family: supria_sans;
-    src: url('https://zapsters.github.io/Home/fonts/SupriaSans-Bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-.supria_sans {
-    font-family: 'supria_sans';
-}
-@font-face {
-    font-family: MarketDeco;
-    src: url('https://zapsters.github.io/Home/fonts/MarketDeco.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-.marketdeco {
-    font-family: 'MarketDeco';
+.BahnschriftFont {
+    font-family: 'upheavtt';
 }
