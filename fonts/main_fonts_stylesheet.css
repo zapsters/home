@@ -23,8 +23,8 @@
 /* FREE */
 @font-face {
     font-family: 'Bahnschrift';
-    src: url('Bahnschrift.woff2') format('woff2'),
-        url('Bahnschrift.woff') format('woff');
+    src: url('https://zapsters.github.io/Home/fonts/Bahnschrift.woff') format('woff');
+      url('https://zapsters.github.io/Home/fonts/Bahnschrift.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
