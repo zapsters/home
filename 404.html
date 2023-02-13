@@ -1,126 +1,122 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<style type="text/css">
-body{
-	<!--background-image:url(https://raw.githubusercontent.com/zapsters/Home/master/images/V4ZapsterLogoGlitch.gif); --->
-    background-repeat: no-repeat, repeat;
-    background-size: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-color: black;
-	margin: 0 0px;
-	padding: 0px 0px;
-	-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none; bottom: 0;
-}
+    <style type="text/css">
+        @font-face {
+          font-family: supria_sans;
+          src: url('https://zapsters.github.io/Home/fonts/SupriaSans-Bold.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+        }
 
-@font-face {
-    font-family: 'bauhausc_demi';
-    src: url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff2') format('woff2'),
-    url('https://zapsters.github.io/Home/fonts/bauhausc_demibold_regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+        body {
+            background-image:url(https://github.com/ZapsterS/SaER/blob/master/images/SaERLogoGlitch.gif?raw=true);
+            background-repeat: no-repeat, repeat;
+            background-size: 400px;
+            background-attachment: fixed;
+            background-position: center;
 
-}
-.sub {
-	font-family: 'bauhausc_demi';
-	color: #fff;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 30px;
-	letter-spacing: 0px;
-	margin: 0 0px;
-	padding: 0px 0px;
-}
-
-.sublinkimg {
--webkit-transition: 2s all;
-  filter: invert(0%);
-  line-height: 1;
-  position: relative;
-}
-
-.sublinkimg:hover {
-  filter: invert(50%);
-  line-height: 1;
-  position: relative;
-}
-
-.srdiv {
-  animation: shake 35s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(0px, -1px) rotate(-1deg); }
-  20% { transform: translate(-2px, 0px) rotate(1deg); }
-  30% { transform: translate(2px, 1px) rotate(0deg); }
-  40% { transform: translate(0px, 0px) rotate(1deg); }
-  50% { transform: translate(0px, 1px) rotate(-1deg); }
-  60% { transform: translate(-2px, 0px) rotate(0deg); }
-  70% { transform: translate(2px, 0px) rotate(-1deg); }
-  80% { transform: translate(0px, 0px) rotate(1deg); }
-  90% { transform: translate(0px, 1px) rotate(0deg); }
-  100% { transform: translate(0px, -1px) rotate(-1deg); }
-}
-
-.subhidden {
-  cursor: context-menu;
-  -webkit-transition: 2s all;	
-  opacity: 0.2;
-  font-family: 'bauhausc_demi';
-  color: #000;
-  text-decoration: underline;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  line-height: 1;
-  position: relative;
-}
-
-.subhidden:hover {
-  cursor: context-menu; 
-  opacity: 0.2;
-  font-family: 'bauhausc_demi';
-  color: #fff;
-  text-decoration: underline;
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 500;
-  letter-spacing: 0px;
-  line-height: 1;
-  position: relative;
-}
-
-.bannerlogo {
-   width: 80%;
-}
-.bottom {
-position: absolute;
-bottom: 0;
-  margin: 10px 10px;
-  padding: 0px 0px;
-}
-</style>
-	<title>ZapsterStudios</title>
-	<link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapsterGames.png"/>
-	</head>
+            font-family: 'supria_sans';
+            background-color: black;
+            margin: 0 0px;
+            padding: 0px 0px;
+        }
+        .sub {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 30px;
+            letter-spacing: 0px;
+            margin: 0 0px;
+            padding: 0px 0px;
+        }
+        
+        .sublinkimg {
+            transition: 2s all;
+            filter: invert(0%);
+            line-height: 1;
+            position: relative;
+        }
+        
+        .sublinkimg:hover {
+            filter: invert(50%);
+            line-height: 1;
+            position: relative;
+        }
+        
+        .srdiv {
+            animation: shake 35s;
+            animation-iteration-count: infinite;
+        }
+        
+        @keyframes shake {
+            0% { transform: translate(1px, 1px) rotate(0deg); }
+            10% { transform: translate(0px, -1px) rotate(-1deg); }
+            20% { transform: translate(-2px, 0px) rotate(1deg); }
+            30% { transform: translate(2px, 1px) rotate(0deg); }
+            40% { transform: translate(0px, 0px) rotate(1deg); }
+            50% { transform: translate(0px, 1px) rotate(-1deg); }
+            60% { transform: translate(-2px, 0px) rotate(0deg); }
+            70% { transform: translate(2px, 0px) rotate(-1deg); }
+            80% { transform: translate(0px, 0px) rotate(1deg); }
+            90% { transform: translate(0px, 1px) rotate(0deg); }
+            100% { transform: translate(0px, -1px) rotate(-1deg); }
+        }
+        
+        .subhidden {
+            cursor: context-menu;
+            transition: 2s all;	
+            opacity: 0.2;
+            font-family: 'bauhausc_demi';
+            color: #000;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: 0px;
+            line-height: 1;
+            position: relative;
+        }
+        
+        .subhidden:hover {
+            cursor: context-menu; 
+            opacity: 0.2;
+            font-family: 'bauhausc_demi';
+            color: #fff;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: 500;
+            letter-spacing: 0px;
+            line-height: 1;
+            position: relative;
+        }
+        
+        .bannerlogo {
+            width: 80%;
+        }
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            margin: 10px 10px;
+            padding: 0px 0px;
+        }
+    </style>
+    <title>Zapsters 404</title>
+    <link rel="shortcut icon" type="image/png" href="https://zapsters.github.io/Home/images/ZapSIcon_C2.png"/>
+</head>
 <body>
-<center>
-<div id="header">
-  <img class="bannerlogo sublinkimg" id="logo" src="https://zapsters.github.io/Home/images/ZapsterStudios_Logo_Neon.png" alt="" style="filter:">
-  <ul id="menu">
-	<p class="sub" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">ERROR 404 - PAGE NOT FOUND</p>
-    <p class="sub" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"><a class="sub" style="text-decoration: underline;" href="/Home/">HOME</a></p>
-  </ul>
-</div>
-</center>
-<div class=bottom>
-<p class="sub subhidden" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" id="hidtext1" >I CANT LOSE YOU, K#####. I know you have to go<br> but it still hurts. You have become so important to me. <br>I will <i>miss</i> you.<br><br>I love you</p>
-</div>
+    <center>
+        <div id="header">
+            <ul id="menu">
+                <p class="sub" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;">ERROR 404 - PAGE NOT FOUND</p>
+                <p class="sub" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"><a class="sub" style="text-decoration: underline;" href="/">HOME</a></p>
+            </ul>
+        </div>
+    </center>
+    <div class=bottom>
+        <p class="sub subhidden" style= "-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" id="hidtext1" >I feel like I need time to myself, but it feels lonely.</p>
+    </div>
 </body>
 
 </html>
