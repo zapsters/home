@@ -33,8 +33,8 @@
     
     .headerlogo {
       width: 90%;
-      max-width: 1168px;
-      padding: 10px 0px;
+      max-width: 900px;
+      padding: 10px 0px 0px 0px;
     }
     
     .sub {
@@ -59,7 +59,7 @@
       display: block;
       background: #222;
       color: #fff;
-      font-size: 25px;
+      font-size: 23px;
       height: 50px;
       text-align: center;
       text-decoration: none;
@@ -76,55 +76,44 @@
       padding: 0px 0px;
     }
     
-    .entryParentContainer {
-      background-color: transparent;
-      padding: 10px 10px 10px 10px;
-      margin: auto;
-      width: 90%;
-      /*border: solid 1px;*/
-    }
-    
     .entryContainer {
       margin: auto;
       background-color: #ebddca;
       max-width: 900px;
+      width: 90%;
       border: solid 2px;
-      min-height: 230px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
       margin-bottom: 30px;
       position: relative;
-      overflow: hidden;
     }
     
     .entryContainer p {
       margin: 0;
+      font-size: 14px;
     }
     
     .entryTitleDiv {
       border-bottom: solid 2px black;
-      font-size: 30px;
-      min-height: 35px;
-      padding: 5px 6px 6px 15px;
-      color: #ed3474;
-      text-shadow: 2px 2px 2px #222;
+      font-size: 23px;
+      padding: 5px 6px 6px 8px;
+      color: #f32a63;
+      text-shadow: 1px 1px 1px #000;
     }
     
     .entryTitleDiv a {
-      color: #ed3474;
+      color: #f32a63;
     }
     
     .entryTitleDiv a:hover {
+      color: #ed3474;
       cursor: pointer;
-      color: #c21f4d;
-      text-shadow: 2px 2px 3px #000;
+      text-shadow: 1px 1px 1px #757575;
     }
     
     .entryContent {
-      font-size: 18px;
-      position: absolute;
-      min-height: 210px;
+      font-size: 13px;
       padding: 6px 40px 20px 13px;
-      text-indent: 50px;
+      text-indent: 15px;
     }
     
     .entryContainer .BtnContainer {
@@ -137,8 +126,7 @@
       right: 5px;
       bottom: 2px;
       text-align: right;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 15px;
     }
     
     .statDIVL {
@@ -146,14 +134,11 @@
       left: 7px;
       bottom: 2px;
       text-align: left;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 15px;
     }
     
     .footer {
-      left: 0;
-      bottom: 0;
-      width: 90%;
+      width: 50%;
       max-width: 950px;
       margin: auto;
       background-color: #ebddca;
@@ -163,6 +148,7 @@
       text-align: center;
       margin-top: 10px;
       margin-bottom: 50px;
+      font-size: 15px;
     }
     
     .footer p {padding: 0; margin: 0;}
@@ -175,7 +161,7 @@
   <!--HEADER -->
   <div class="header">
     <img class="headerlogo" id="logo" onclick="reveal(1)" src="https://github.com/ZapsterS/Home/blob/master/images/ZSLogo_Neon_Old.png?raw=true" alt="logo" style="filter: invert(0%);">
-    <p class="sub" style="font-size: 20px;" id="projectSR">Learning today to Improve Your Tomorrow</p>
+    <p class="sub" style="font-size: 15px;" id="projectSR">Learning today to Improve Your Tomorrow</p>
   </div>
   <br>
   
@@ -196,18 +182,14 @@
   <div class="entryContainer">
     <div class="entryTitleDiv">
       <a href="/InputStack">Input Stack!</a>
+      
     </div>
     <div class="entryContent">
       <p>An online singleplayer or multiplayer game of crazy proportions. Go in alone, or with friends, and face an infinitely growing list of modules. Modules slowly spawn in, needing more and more work and teamwork.</p>
       <p>This is made possible using google's Firebase Realtime Database to keep browsers in-sync of game data such as game time, module type, input values, player names, and more necessary information. Probably my most favorite database project I have made so far.</p>
     </div>
     <div class="statDIVR">
-      <p>Version: Beta 0.9</p>
       <p>One or more players</p>
-    </div>
-    <div class="statDIVL">
-      <p>Last Updated: January 16th, 2022.</p>
-      <p>[Minor Focus] Made in 2021.</p>
     </div>
   </div>
   
@@ -217,17 +199,13 @@
       <a href="/WritingAssault">Writing Assault V2</a>
     </div>
     <div class="entryContent">
-      <p>Answer prompts and try to find the odd one out. Can you find the odd one out? <br>
-        Version one was released around 2018-2019 as my first attempt at using Firebase's database. It was a little messy, so Version 2 (the version here) improved many issues to keep the game playable. It was a noble start into learning how to utilize firebase that taught me a lot of things about the capability of multiplayer games and synced sites.</p>
-      </div>
-      <div class="statDIVL">
-        <p>V1 Released: ~2019.</p>
-        <p>Last Updated: August 16th, 2021.</p>
-      </div>
-      <div class="statDIVR">
-        <p>Three or more players</p>
-      </div>
+      <p>Answer prompts and try to find the odd one out. Can you find the odd one out?</p>
+      <p>Version one was released around 2018-2019 as my first attempt at using Firebase's database. It was a little messy, so Version 2 (the version here) improved many issues to keep the game playable. It was a noble start into learning how to utilize firebase that taught me a lot of things about the capability of multiplayer games and synced sites.</p>
     </div>
+    <div class="statDIVR">
+      <p>Three or more players</p>
+    </div>
+  </div>
     
     <div class="entryContainer">
       <div class="entryTitleDiv">
@@ -236,9 +214,6 @@
       <div class="entryContent">
         <p>An online pixel art painting site. All changes to the canvas updates between users in real time. Also, save screenshots of the current canvas to save the current canvas to keep your art stored without worry. <br>
           Uses google's Firebase Realtime Database, a cloud-hosted database, to store canvas information (painted pixels & colors).</p>
-        </div>
-        <div class="statDIVL">
-          <p>Made in 2021</p>
         </div>
       </div>
       
@@ -249,10 +224,6 @@
         <div class="entryContent">
           <p>A site a part of the fictional SaER universe. The SaER company is a private, secretive company that works silently for the benefit of the people, or atleast some people.</p>
         </div>
-        <div class="statDIVL">
-          <p>Last Updated: December 9th, 2022.</p>
-          <p>Started around 2018.</p>
-        </div>
       </div>
       
       
@@ -262,9 +233,6 @@
         </div>
         <div class="entryContent">
           <p>A collection of websites created by me that do not fit here. Includes some side projects that are simple and/or unfinished. Projects here sometimes will be moved to the front page here when they reach a certain pollish or state that I believe deserve a spot on the front page (Paint is a good example of one of these projects). </p>
-        </div>
-        <div class="statDIVL">
-          <p>Last Updated: August 10th, 2022.</p>
         </div>
       </div>
       
